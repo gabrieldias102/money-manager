@@ -16,11 +16,9 @@ export default function NavBar() {
   const { setTheme } = useTheme();
 
   return (
-    <div className="flex justify-between px-10 py-4 bg-accent">
+    <div className="flex justify-between px-24 py-4 bg-accent">
       <div className="flex gap-4">
         <Button>Home</Button>
-        <Button>Dashboard</Button>
-        <Button>AddNew</Button>
       </div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
