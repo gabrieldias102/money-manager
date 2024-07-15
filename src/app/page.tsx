@@ -1,11 +1,12 @@
 export default function Home() {
   // todo:
-  // remove this mocking and add a proper database (like prisma or sqlite)
+  // - remove this mocking and add a proper database (like prisma or sqlite)
+  // - turn boxes into components
 
   const user = "Gabriel";
-  const totalBalance = "2.000,00";
-  const monthlyOutcome = "1.200,00";
-  const monthlyIncome = "600,00";
+  const monthlyOutcome = 600.0;
+  const monthlyIncome = 2000.0;
+  const totalBalance = monthlyIncome - monthlyOutcome;
 
   return (
     <main>
@@ -14,8 +15,8 @@ export default function Home() {
           <h1 className="text-2xl font-bold pb-8">
             Olá {user}! Seja bem vindo.
           </h1>
-          <div className="flex flex-row justify-between w-2/3">
-            <div className="p-4 shadow-2xl rounded-xl max-w-fit bg-card-foreground">
+          <div className="flex flex-row justify-between w-2/3 gap-6">
+            <div className="p-4 shadow-2xl rounded-xl w-1/3 bg-card-foreground">
               <h2 className="font-bold text-primary-foreground text-lg pb-4">
                 Seu balanço atual:
               </h2>
@@ -23,7 +24,7 @@ export default function Home() {
                 R$: {totalBalance}
               </p>
             </div>
-            <div className="p-4 shadow-2xl rounded-xl max-w-fit bg-card-foreground">
+            <div className="p-4 shadow-2xl rounded-xl w-1/3 bg-card-foreground">
               <h2 className="font-bold text-primary-foreground text-lg pb-4">
                 Entradas mensais:
               </h2>
@@ -31,7 +32,7 @@ export default function Home() {
                 R$: {monthlyIncome}
               </p>
             </div>
-            <div className="p-4 shadow-2xl rounded-xl max-w-fit bg-card-foreground">
+            <div className="p-4 shadow-2xl rounded-xl w-1/3 bg-card-foreground">
               <h2 className="font-bold text-primary-foreground text-lg pb-4">
                 Saídas mensais:
               </h2>
